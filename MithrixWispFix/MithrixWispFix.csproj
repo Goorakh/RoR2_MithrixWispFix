@@ -111,8 +111,10 @@
     <Delete Files="$(TSPackagePluginDir)/$(AssemblyName).dll" />
     <Delete Files="$(TSPackagePluginDir)/$(AssemblyName).pdb" Condition="'$(Configuration)'=='Release'" ContinueOnError="true" />
 
+    <!--
     <Exec Command="Unity.UNetWeaver.exe &quot;$(PkgUnityEngine_Modules)\lib\netstandard2.0\UnityEngine.CoreModule.dll&quot; &quot;$(PkgRiskOfRain2_GameLibs)\lib\netstandard2.0\com.unity.multiplayer-hlapi.Runtime.dll&quot; &quot;$(TSPackagePluginDir)&quot; &quot;$(SolutionDir)$(ProjectName)\$(OutDir)$(AssemblyName).dll&quot; &quot;$(NugetPackageRoot)\netstandard.library.ref\2.1.0\ref\$(TargetFramework)&quot;" WorkingDirectory="$(ProjectDir)\NetworkWeaver" />
-    
+    -->
+
     <PropertyGroup>
       <NetWeaverHasOutput>false</NetWeaverHasOutput>
       <NetWeaverHasOutput Condition="Exists('$(TSPackagePluginDir)/$(AssemblyName).dll')">true</NetWeaverHasOutput>
